@@ -1,11 +1,11 @@
 This page provided the main code, basic data and scripts used in our drug prioritization analysis based on DESE(Genome Biol 20, 233 (2019). https://doi.org/10.1186/s13059-019-1801-5).
 
-### **Step 1: Process the raw data and get the drug- and control-vehicle -induced gene expression profiles**
+### **Step 1: Process the raw data to obtain the drug- and control-vehicle -induced gene expression profiles**
 1)./Process_raw_data/GSE119291/get_raw_expression_profiles_from_GEO.R was used to get the raw drug-induced gene expression profiles of Control NPC and SZ NPC line from GSE119291.
 
 2)./Process_raw_data/CMap2/get_CMap2_Level3_gene_expression_profiles.py was used to get the raw drug-induced gene expression profiles of certain cell line at certain time from CMap 2.
 
-### **Step 2: Compute the genes' log2foldchanges induced by drugs (drug perturbation profiles)**
+### **Step 2: Compute the genes' log2foldchanges induced by drugs or compounds**
 1)./get_drug_perturbation_profiles/GSE119291/Differential_gene_expression_analysis.R was used to perform the differential expression analysis based on the drug-induced gene expression profiles of Control NPC and SZ NPC line. The result was put into KGGSEE to perform selective drug perturbation analysis.
 
 2)./get_drug_perturbation_profiles/CMap 2/Differential_gene_expression_analysis.R was used to perform the differential expression analysis based on the drug-induced gene expression profiles of certain cell line in CMap 2. The result was put into KGGSEE to perform selective drug perturbation analysis.
