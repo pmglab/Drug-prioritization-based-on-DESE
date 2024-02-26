@@ -37,11 +37,14 @@ expr_mean <- expr_mean[,-1]
 #get sample information to further extract normal hipsc and sz gene expression profiles, respectively
 sample_info = read.table(sample_info_path,sep="\t",header=T)#get https://www.ncbi.nlm.nih.gov/geo/geo2r/?acc=GSE119291&platform=GPL25480
 
+#extract the Accession ID of Control NPC line and hiPSC NPC line's drug- and control-vehicle-induced gene expression profiles
 ctrl_npc_info = sample_info[which(sample_info$Source.name == "hiPSC_control"),]$Accession
 sz_npc_info = sample_info[which(sample_info$Source.name == "hiPSC_SZ"),]$Accession
 
+#extract the Control NPC line and hiPSC NPC line's drug- and control-vehicle-induced gene expression profiles
 ctrl_npc_expr = expr_mean[,ctrl_npc_info]
 sz_npc_expr = expr_mean[,sz_npc_info]
 
+#write the drug- and control-vehicle- induced gene expression profiles to files.
 write.table(ctrl_npc_expr,file=paste(output,"gse119291_ctrl_hipsc_expression.txt",sep=""),sep="\t",row.names=T,quote=F)
 write.table(sz_npc_expr,file=paste(output,"gse119291_sz_hipsc_expression.txt",sep=""),sep="\t",row.names=T,quote=F)
