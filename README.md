@@ -1,4 +1,4 @@
-This page provided the main code, basic data and scripts used in our drug prioritization analysis based on DESE(Genome Biol 20, 233 (2019). https://doi.org/10.1186/s13059-019-1801-5).
+This page provided the main code, basic data and scripts used in our drug prioritization analysis based on our integrative software platform, KGGSEE(https://pmglab.top/kggsee/#/).
 
 ### **Step 1: Process the raw data to obtain the drug- and control-vehicle -induced gene expression profiles**
 1)./Process_raw_data/GSE119291/get_raw_expression_profiles_from_GEO.R was used to get the raw drug-induced gene expression profiles of Control NPC and SZ NPC line from GSE119291.
